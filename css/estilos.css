@@ -14,7 +14,7 @@ body{
 .container{
     display: grid;
     height: 99.97vh;
-    grid-template: 8vh 92vh / 1fr 5fr;
+    grid-template: 8vh 92vh / minmax(240px,1fr) 5fr;
 }
 .header,.icon,.indice{
     background: #000000;
@@ -59,11 +59,7 @@ body{
     grid-template: repeat(4,100%) / 1fr;
     overflow: hidden;
 }
-.item--pag{
-    background: #12312123;
-    border: 1px solid pink;
-    border-radius: 100px
-}
+
 .indice--header{
     display: inherit;
     flex-direction: inherit;
@@ -82,11 +78,39 @@ body{
     color: white;
     text-decoration: none;
     margin: 10px 0;
-    background: linear-gradient(#6320ee,#0fd5ca);
-    border-radius: 25px;
+    border: #12321211 3px solid;
+    border-bottom: #6320ee 3px solid;
 } 
+.indice a:hover{
+    background: #0fd5cbc9;
+    border-bottom: #0fd5cb 3px solid;
+    transition: all 750ms;
+}
 i{
     color: white;
     font-size: 2.5vw;
     margin: 4vh 0;
+}
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10vh 2vw; */
+    background: linear-gradient(#0f0f0f25,#ebebeb,#ebe8e8),url('https://static.makeuseof.com/wp-content/uploads/2014/12/virtual-servers-994x400.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background */
+}
+.inicio-conainer{
+    background: rgb(255, 255, 255);
+    box-shadow: #0000001c 4px 4px 10px 10px;
+    width: 80%;
+    height: 30%;
+    margin: 8vh auto 0;
+    padding: 40px
+}
+h3{
+    font-size: 1.7em;
+    font-weight: 700;
+
 }
