@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(#72ddf7, #b388eb);
+}
+.container{
+    display: grid;
+    height: 99.77vh;
+    grid-template: 8vh 1fr / 1fr 5fr;
+}
+.item{
+    /* background: blue; */
+    border: 1px red solid;
+}
+.header{
+    grid-column: 1 / -1;
+}
+.contenido{
+    display: grid;
+    position: relative;
+    grid-template: repeat(4,100%) / 1fr;
+    overflow: hidden;
+}
+.item--pag{
+    background: #12312123;
+    border: 1px solid pink;
+}
