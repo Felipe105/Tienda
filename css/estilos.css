@@ -16,8 +16,13 @@ body{
     height: 99.97vh;
     grid-template: 8vh 92vh / 1fr 5fr;
 }
+.header,.icon,.indice{
+    background: #000000;
+    border: #0fd5ca 2px solid;
+    
+}
 .header{
-    border-bottom: #0fd5ca 2px solid;
+    border-left: none;
     background: #000000;
     font-family: fuente2;
     font-size: 6vh;
@@ -30,11 +35,7 @@ body{
 .icon figure img{
     width: 8vh;
 }
-.header,.icon,.indice{
-    background: #000000;
-    border: #0fd5ca 2px solid;
-    
-}
+
 .icon{ 
      border-right: none;
      border-bottom: none;
