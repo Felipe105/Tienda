@@ -1,6 +1,15 @@
-body{
-    background: linear-gradient(#72ddf7, #b388eb);
+@font-face{
+    font-family: fuente1;
+    src: url('../font/Audiowide-Regular.ttf')
 }
+@font-face{
+    font-family: fuente2;
+    src: url('../font/Baumans-Regular.ttf')
+}
+body{
+    background: #ffffff;
+}
+
 .container{
     display: grid;
     height: 99.77vh;
@@ -8,10 +17,31 @@ body{
 }
 .item{
     /* background: blue; */
-    border: 1px red solid;
+    border: 1px rgb(0, 162, 255) solid;
 }
 .header{
+    background: #000000;
     grid-column: 1 / -1;
+    font-family: fuente2;
+    font-size: 6vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: #ffffff 5px 5px 20px;
+    display: flex;
+    align-items: center;
+}
+.header figure img{
+    width: 8vh;
+}
+.header b{
+    margin: 0 auto;
+}
+.header span{
+    color: #13b1f0;
+    text-shadow: #13b1f0 5px 5px 20px;
+}
+.indice{
+    background: #000000;
 }
 .contenido{
     display: grid;
@@ -22,4 +52,5 @@ body{
 .item--pag{
     background: #12312123;
     border: 1px solid pink;
+    border-radius: 100px
 }
