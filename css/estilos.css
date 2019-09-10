@@ -330,6 +330,7 @@ span p{
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .sevicio b{
     display: block;
@@ -342,11 +343,41 @@ span p{
 .sevicio{
     width: 70%;
     display: flex;
-    margin: 10vw auto;
+    margin: 4vw auto;
     justify-content: center;
     text-align: justify;
 }
-
+.opciones{
+    box-shadow: #0a0a0a23 1px 1px 20px 1vw;
+    margin: 5vh auto 0;
+    height: 40%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+}
+.opt{
+    border: 1px #0a0a0a50 solid;
+    width: 47%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: .6vw;
+}
+.opt img{
+    width: 20%;
+    margin-left: 1vw;
+}
+.opt span{
+    margin: 2vw;
+}
+.opt h5{
+    margin: 1vw 2vw;
+    font-weight: bold;
+}
 #a1{
     position: sticky;
 }
@@ -378,6 +409,107 @@ span p{
     animation-timing-function: linear;
 
 }
+
+ul li,a{
+    list-style: none;
+    text-decoration: none;
+}
+h2{
+    font-size: 2.5em;
+}
+.login{
+    width: 500px;
+    margin:  1VH auto;
+    border: white 2px solid;
+    padding: 0 1vw 2vw 1vw;
+    border-radius: 70px;
+    color: white;
+    line-height: 4.2;
+    box-shadow: #2e24652e 3PX 5PX 20PX 20px
+}
+.login--form{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
+.login-area{
+    margin: 0 0 3vh;
+    color: white;
+    height: 4vh;
+    background: rgba(255, 255, 255, 0);
+    border-bottom: 3px solid white;
+    width: 80%;
+    font-size: 1.2em;
+}
+.boton{
+    color: white;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 60px;
+    border: #000000 0px solid;
+    margin: 1vh auto;
+    width: 70%;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.login--from__opt{
+    padding: 0 3vw;
+    width: 60%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    margin-bottom: 40px
+}
+.login--from__opt input{
+    margin-right: 1vw;
+    color: white;
+}
+::placeholder{
+    color: white;
+}
+.login--opciones__redes{
+    color: white;
+    padding: 20px 100px;
+    filter: invert(100);
+}
+
+.login--opciones__redes img{
+    width: 60px;
+    color: white;
+    margin-right: 20px;
+}
+
+.login--opciones__redes a{
+    display: flex;
+    align-items: center;
+    color: white;
+    color: black;
+    font-size: 1.1em;
+}
+
+.login--opciones span a{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.inicia_sesion{
+    display: flex;
+    color: white;
+    justify-content: center;
+    margin: 1vh auto;
+}
+
+
+.z{
+    background: linear-gradient(#72ddf7, #b388eb);
+    color: white;
+    overflow: auto;
+}
+
 
 @keyframes iluminar {
     0%{
