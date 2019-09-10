@@ -6,6 +6,7 @@
     font-family: fuente2;
     src: url('../font/Baumans-Regular.ttf')
 }
+
 body{
     font-family: sans-serif;
     background: #ffffff;
@@ -59,7 +60,7 @@ body{
     position: relative;
     display: grid;
     /* position: relative; */
-    grid-template:  100% / repeat(4,100%);
+    grid-template:  100% / repeat(6,100%);
     overflow: hidden;
 }
 
@@ -75,7 +76,7 @@ body{
     width: 96%;
     margin-bottom: 2vh;
 }
-.indice a{
+.ancla{
     padding: 1vh 1vw;
     font-size: .87vw;
     color: #25ccff;
@@ -83,11 +84,12 @@ body{
     margin: 10px 0;
     border: #12321211 3px solid;
     border-bottom: #6320ee 3px solid;
+    outline: none;
 }
-.indice--header > a:active .header{
+.ancla:active .header{
     background: #0978a3
 }
-.indice a:hover{
+.ancla:hover{
     background: #13b1f0c5;
     border-bottom: #0978a3 3px solid;
     transition: all 750ms;
@@ -118,13 +120,79 @@ i{
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     position: relative;
     animation-fill-mode: forwards;
+}
+h4{
+    font-size: 1.2vw;
+    margin: 1.4vh 10vw;
 }
 h3{
     color: #0a0a0a;
     font-size: 3vw;
-    margin: 50px 0 0 10vw;
+    background: #13b1f0;
+    margin: 5vh 0 2vh 4vw;
+    width: 30vw;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-shadow: #ffffff 1px 1px 20px;
+    box-shadow: #13b1f0 1px 1px 20px;
+}
+.coursel-container{
+    align-items: center;
+    height: 30%;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto; 
+    margin-bottom: 0;
+    /* box-shadow: #00000050 5px 5px 20px; */
+    padding-top: 20px;
+}
+.coursel{
+    display: flex;
+    margin: 6vh 0;
+    justify-content: space-between;
+    
+    box-sizing: border-box;
+    /* position: relative; */
+    
+}
+
+.coursel figure{
+    flex-direction: column;
+    /* position: absolute; */
+    box-sizing: border-box;
+    margin-right: 50px;
+    transition: all .4s;
+    transform-origin: left bottom;
+    position: relative;
+}
+.coursel img{
+    height: 11vh;
+    margin: 0 0 3vh;
+}
+figure span,figure a{
+  width: 1px;
+  font-size: 1vw;
+  height: 1px;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+.x{
+    margin-left: 50px
+}
+.coursel:hover figure{
+    opacity: 0.3;
+}
+.coursel figure:hover{
+    opacity: 1;
+    transform: scale(1.4) 
+}
+
+.coursel figure:hover ~ figure{
+    transform: translateX(7vw)
 }
 .inicio-container--nuevos ul{
     width: 100%;
@@ -151,6 +219,9 @@ h3{
     width: 100%;
     animation: cambiooo 350ms linear forwards 1;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
 }
 .inicio-container--nuevos li img{
     height:16.1vw;
@@ -165,8 +236,117 @@ h3{
 }
 span p{
     font-size: .8vw;
-    margin-top: 10vh
+    margin-top: 7vh
 }
+.productos{
+    display: grid;
+    grid-template: repeat(6,35%) / 1fr;
+    height: 100%;
+    margin-top: 10vh;
+    overflow: auto;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+}
+.producto-container{
+    /* background: #13b1f0; */
+    border: 1px solid rgb(93, 93, 93);
+    border-left: none;
+    border-right: 0;
+    display: flex;
+    align-items: center;    
+}
+.producto-container figure{
+    height: 9vw;
+    width: 9vw;
+    /* border: 1px #13b1f0 solid; */
+    margin: 0 4vw 0 4vw;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.producto-container figure img{
+    height: 100%;
+}
+
+.producto-container a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0a0a0a;
+}
+.producto-container span{
+    width: 60%;
+    font-size: .8vw;
+    line-height: 2vh
+}
+.nosotros{
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,1)),url('../imagenes/somo_portada.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+}
+.nosotros p{
+    width: 40%;
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 1vw 0 2vw 10vw;
+    text-shadow: #0a0a0a 5px 5px 5px;
+}
+.nosotros b{
+    font-size: 2.2vw;
+    padding: 2vw 0 2vw;
+    display: block;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+}
+.more em{
+    font-size: 1.2vw;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+.resposabilidad,.mision{
+    width: 24%;
+    height: 80%;
+    border-radius: 25px;
+    background: linear-gradient(#aa48ec,#3ec8ff);
+    color: white;
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    box-shadow: #0a0a0a 5px 5px 20px;
+    margin: 0 5vw;
+}
+.server-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sevicio b{
+    display: block;
+    padding: 1vw;
+    margin-bottom: 2vw;
+    border-bottom: dashed #0a0a0a 1px;
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+.sevicio{
+    width: 70%;
+    display: flex;
+    margin: 10vw auto;
+    justify-content: center;
+    text-align: justify;
+}
+
 #a1{
     position: sticky;
 }
@@ -177,10 +357,64 @@ span p{
     /* background: #0978a3; */
     /* animation-delay: 3100ms; */
 }
+.item--pag .ancla{
+    border-radius: 100%;
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1vw;
+    animation: iluminar 2s infinite alternate linear;
+    height: 2vw;
+    transition: all 350ms;
 
+}
+.item--pag .ancla:hover{
+    animation-name: iluminar,iluminar2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+@keyframes iluminar {
+    0%{
+        box-shadow: #bd5bff 0px 0px 20px;
+        border-bottom: #bd5bff 3px solid;
+    }
+    50%{
+        box-shadow: #bd5bff 0px 0px 20px 4px;
+        border-bottom: #bd5bff 3px solid;
+        
+    }
+    100%{
+        box-shadow: #57b3ff 0px 0px 20px;
+        border-bottom: #57b3ff 3px solid
+    }
+}
+
+@keyframes iluminar2 {
+    0%{
+        background: #ffffff00
+    }
+    50%{
+        background: #ffffff62
+
+    }
+    100%{
+        background: #55555549
+    }
+}
 @keyframes aparecer {
     0%{
         left: -100vw;
+        opacity: 0;
+
+    }
+    50%{
+        opacity: .2;
     }
     100%{
         left: 100px;
@@ -189,6 +423,9 @@ span p{
 @keyframes alejar{
     0%{
         left: 100px;
+    }
+    50%{
+        opacity: .1;
     }
     100%{
         left: 100vw;
@@ -209,33 +446,55 @@ span p{
 }
 @keyframes cambioooInicio {
     0%{
-        transform: translateX(100%)
+        transform: translateX(-100%);
+        
     }
     100%{
-        transform: translateX(0)
+        transform: translateX(0);
     }
 }
 @keyframes cambiooo2 {
     0%{
-        transform: translateX(0)
+        transform: translateX(0);
+        
     }
     100%{
-        transform: translateX(-100%)
+        transform: translateX(-100%);
     }
 }
 @keyframes cambiooo3 {
     0%{
-        transform: translateX(-100%)
+        transform: translateX(-100%);
+        
     }
     100%{
-        transform: translateX(calc(-100% * 2))
+        transform: translateX(calc(-100% * 2));
     }
 }
 @keyframes cambiooo4 {
     0%{
-        transform: translateX(-200%)
+        transform: translateX(-200%);
+        
     }
     100%{
-        transform: translateX(calc(-100% * 3))
+        transform: translateX(calc(-100% * 3));
+    }
+}
+@keyframes cambiooo5 {
+    0%{
+        transform: translateX(-300%);
+        
+    }
+    100%{
+        transform: translateX(calc(-100% * 4));
+    }
+}
+@keyframes cambiooo6 {
+    0%{
+        transform: translateX(-400%);
+        
+    }
+    100%{
+        transform: translateX(calc(-100% * 5));
     }
 }
