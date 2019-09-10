@@ -9,6 +9,7 @@
 body{
     font-family: sans-serif;
     background: #ffffff;
+    will-change: transform 
 }
 
 .container{
@@ -17,13 +18,14 @@ body{
     grid-template: 8vh 92vh / minmax(240px,1fr) 5fr;
 }
 .header,.icon,.indice{
-    background: #000000;
-    border: #0fd5ca 2px solid;
-    
+    background: #252525;
+    /* border: #0fd5ca 2px solid; */
+
 }
+
 .header{
     border-left: none;
-    background: #000000;
+    /* background: #000000; */
     font-family: fuente2;
     font-size: 6vh;
     text-align: center;
@@ -36,7 +38,7 @@ body{
     width: 8vh;
 }
 
-.icon{ 
+.icon{
      border-right: none;
      border-bottom: none;
 }
@@ -51,12 +53,13 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 .contenido{
-    display: grid;
     position: relative;
-    grid-template: repeat(4,100%) / 1fr;
+    display: grid;
+    /* position: relative; */
+    grid-template:  100% / repeat(4,100%);
     overflow: hidden;
 }
 
@@ -75,42 +78,164 @@ body{
 .indice a{
     padding: 1vh 1vw;
     font-size: .87vw;
-    color: white;
+    color: #25ccff;
     text-decoration: none;
     margin: 10px 0;
     border: #12321211 3px solid;
     border-bottom: #6320ee 3px solid;
-} 
+}
+.indice--header > a:active .header{
+    background: #0978a3
+}
 .indice a:hover{
-    background: #0fd5cbc9;
-    border-bottom: #0fd5cb 3px solid;
+    background: #13b1f0c5;
+    border-bottom: #0978a3 3px solid;
     transition: all 750ms;
+    color: #6320ee;
 }
 i{
-    color: white;
+    color: #25ccff;
     font-size: 2.5vw;
     margin: 4vh 0;
 }
 
+.contenido{
+    box-sizing: border-box;
+
+}
 .inicio{
     display: flex;
     flex-direction: column;
     /* padding: 10vh 2vw; */
-    background: linear-gradient(#0f0f0f25,#ebebeb,#ebe8e8),url('https://static.makeuseof.com/wp-content/uploads/2014/12/virtual-servers-994x400.jpg');
+    /* background: linear-gradient(#7e45da,#25ccff); */
     background-size: 100%;
     background-repeat: no-repeat;
-    /* background */
+
 }
-.inicio-conainer{
-    background: rgb(255, 255, 255);
-    box-shadow: #0000001c 4px 4px 10px 10px;
-    width: 80%;
-    height: 30%;
-    margin: 8vh auto 0;
-    padding: 40px
+.item--pag{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    animation-fill-mode: forwards;
 }
 h3{
-    font-size: 1.7em;
-    font-weight: 700;
+    color: #0a0a0a;
+    font-size: 3vw;
+    margin: 50px 0 0 10vw;
+}
+.inicio-container--nuevos ul{
+    width: 100%;
+    height: 33vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.inicio-container--nuevos ul li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.inicio-container--nuevos a{
+    /* background: #fefcff7c;
+    border: 1px red solid; */
+    display: flex;
+    justify-content: space-between;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+}
+.p1{
+    height: 100%;
+    width: 100%;
+    animation: cambiooo 350ms linear forwards 1;
+    box-sizing: border-box;
+}
+.inicio-container--nuevos li img{
+    height:16.1vw;
+    margin-right: 20vw;
+}
+.inicio-container--nuevos li span{
+    width: 30%;
+    display: inline-block;
+    margin: 4vh 0 0 10vw;
+    font-size: 1vw
 
+}
+span p{
+    font-size: .8vw;
+    margin-top: 10vh
+}
+#a1{
+    position: sticky;
+}
+#a2{
+    left: -100vw;
+    position: absolute;
+    /* animation-direction: alternate; */
+    /* background: #0978a3; */
+    /* animation-delay: 3100ms; */
+}
+
+@keyframes aparecer {
+    0%{
+        left: -100vw;
+    }
+    100%{
+        left: 100px;
+    }
+}
+@keyframes alejar{
+    0%{
+        left: 100px;
+    }
+    100%{
+        left: 100vw;
+        opacity: 0;
+    }
+}
+
+@keyframes cambiooo {
+    0%{
+        transform-origin: 50% 100%;
+        opacity: 0;
+        transform: scale(.1)
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes cambioooInicio {
+    0%{
+        transform: translateX(100%)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
+@keyframes cambiooo2 {
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(-100%)
+    }
+}
+@keyframes cambiooo3 {
+    0%{
+        transform: translateX(-100%)
+    }
+    100%{
+        transform: translateX(calc(-100% * 2))
+    }
+}
+@keyframes cambiooo4 {
+    0%{
+        transform: translateX(-200%)
+    }
+    100%{
+        transform: translateX(calc(-100% * 3))
+    }
 }
