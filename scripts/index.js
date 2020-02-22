@@ -14,10 +14,10 @@
   }
 }
  
-contenido[0].addEventListener('animationend', event =>{
+contenido[0].addEventListener('animationend', event => {
      // console.log(event);
      
-     if(event.animationName === 'cambiooo'){
+     if(event.animationName === 'cambiooo0'){
          marco1.style.animationPlayState = 'running'
          marco1.style.animationName = 'alejar'
          marco1.style.animationDuration = '1.2s'
