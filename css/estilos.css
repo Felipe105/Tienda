@@ -35,7 +35,7 @@ body{
     display: flex;
     align-items: center;
 }
-.icon figure img{
+.icon img{
     width: 8vh;
 }
 
@@ -217,7 +217,7 @@ figure span,figure a{
 .p1{
     height: 100%;
     width: 100%;
-    animation: cambiooo 350ms linear forwards 1;
+    animation: cambiooo0 350ms linear forwards 1;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -565,7 +565,7 @@ h2{
     }
 }
 
-@keyframes cambiooo {
+@keyframes cambiooo0 {
     0%{
         transform-origin: 50% 100%;
         opacity: 0;
@@ -576,7 +576,7 @@ h2{
         opacity: 1;
     }
 }
-@keyframes cambioooInicio {
+@keyframes cambiooo1 {
     0%{
         transform: translateX(-100%);
         

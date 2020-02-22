@@ -23,20 +23,20 @@
         <nav class="item indice">
             <div class="indice--header">
                 <i>Buscar</i>
-               <a class="boton1 ancla"  href="#">INICIO</a>
-               <a class="boton2 ancla" href="#" >PRODUCTOS</a>
-               <a class="boton3 ancla" href="#">QUIENES SOMOS</a>
-               <a class="boton4 ancla" href="#" >TERMINOS</a>
+               <a class="boton1 ancla" onclick="feedBoton(1)" href="#">INICIO</a>
+               <a class="boton1 ancla" href="#"  onclick="feedBoton(2)">PRODUCTOS</a>
+               <a class="boton1 ancla" href="#" onclick="feedBoton(3)">QUIENES SOMOS</a>
+               <a class="boton1 ancla" href="#"  onclick="feedBoton(4)">TERMINOS</a>
            </div>
            <div class="indice--footer">
-                <a  class="boton5 ancla" href="#">Cendro de Ayuda </a>
-                <a class="boton6 ancla" href="#">Contactanos</a>
+                <a  class="boton1 ancla" href="#" onclick="feedBoton(5)">Cendro de Ayuda </a>
+                <a class="boton1 ancla" href="#" onclick="feedBoton(6)">Contactanos</a>
             </div>
         </nav>
         <section class="item contenido">
             <div class="item--pag inicio" id="inicio">
                 <div class="p1">
-                        <a class="boton2 ancla" href="#" >SIG..</a>
+                        <a class="boton1 ancla" onclick="feedBoton(2)" href="#" >SIG..</a>
                     <a id="1"></a>
                     <div class="inicio-container--nuevos">
                         <h3>Nuevos Productos</h3>
@@ -148,7 +148,7 @@
             <div class="item--pag">
               <a id="2"></a>
                 <div class="p1">
-                    <a class="boton3 ancla" href="#">SIG..</a>
+                    <a class="boton1 ancla" onclick="feedBoton(3)" href="#">SIG..</a>
                     <h3>Productos</h3>
                         <div class="productos">
                             <div class="producto-container">
@@ -249,7 +249,7 @@
             </div>
             <div class="item--pag">
                 <div class="p1">
-                    <a class="boton4 ancla" href="#">SIG..</a>
+                    <a class="boton1 ancla" onclick="feedBoton(4)" href="#">SIG..</a>
                     <div class="nosotros">
                         <p>
                                <b>
@@ -279,7 +279,7 @@
             </div>
             <div class="item--pag">
                 <div class="p1">
-                  <a class="boton5 ancla" href="#">SIG..</a>
+                  <a class="boton1 ancla" onclick="feedBoton(5)" href="#">SIG..</a>
                   <div class="server-container">
                       <div class="sevicio">
                           <p>
@@ -304,7 +304,7 @@
             </div>
             <div class="item--pag">
                     <div class="p1">
-                      <a class="boton6 ancla" href="#">SIG..</a>
+                      <a class="boton1 ancla" href="#"  onclick="feedBoton(6)">SIG..</a>
                         <h3>Centro de Ayuda</h3>
                         <h4>¿En que podemos ayudarte?</h4>
                         <div class="opciones">
@@ -375,7 +375,7 @@
             </div>
             <div class="item--pag z">
                 <div class="p1">
-                    <a class="boton1 ancla"  href="#">INICIO</a>
+                    <a class="boton1 ancla"  onclick="feedBoton(0)" href="#">INICIO</a>
 
                     <section class="login">
                             <form class="login--form">
@@ -400,151 +400,8 @@
             </div>
             
         </section>
-        <script>
-            // no suo una sola clase boton por la necesidad de reutilizarlos en otras partes
-            const $boton = document.getElementsByClassName('boton1')
-            const $boton2 = document.getElementsByClassName('boton2')
-            const $boton3 = document.getElementsByClassName('boton3')
-            const $boton4 = document.getElementsByClassName('boton4')
-            const $boton5 = document.getElementsByClassName('boton5')
-            const $boton6 = document.getElementsByClassName('boton6')
-
-            const marco1 = document.getElementById('a1')
-            const marco2 = document.getElementById('a2')
-            const contenido = document.getElementsByClassName('p1')
-            const pag = document.getElementsByClassName('item--pag')
-
-
-            $boton[0].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambioooInicio'
-                    pag[i].style.animationDuration = '1s'
-                    
-                }
-                
-            })
-            $boton[1].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambioooInicio'
-                    pag[i].style.animationDuration = '1s'
-                    
-                }
-                
-            })
-
-            $boton2[0].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo2'
-                    pag[i].style.animationDuration = '1s'
-                }
-            })
-            $boton2[1].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo2'
-                    pag[i].style.animationDuration = '1s'
-                }
-            })
-
-            $boton3[0].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo3'
-                    pag[i].style.animationDuration = '1s'
-                }
-                
-            })
-            $boton3[1].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo3'
-                    pag[i].style.animationDuration = '1s'
-                }
-                
-            })
-            $boton4[0].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo4'
-                    pag[i].style.animationDuration = '1s'
-                }
-            })
-            $boton4[1].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo4'
-                    pag[i].style.animationDuration = '1s'
-                }
-            })
-            $boton5[0].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo5'
-                    pag[i].style.animationDuration = '1s'
-                }
-            })
-            $boton5[1].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo5'
-                    pag[i].style.animationDuration = '1s'
-                }
-            })
-            $boton6[0].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo6'
-                    pag[i].style.animationDuration = '1s'
-                }
-                
-            })
-            $boton6[1].addEventListener('click', event => {
-                for (let i = 0; i < pag.length; i++) {
-                    pag[i].style.animationName = 'cambiooo6'
-                    pag[i].style.animationDuration = '1s'
-                }
-                
-            })
-            console.log($boton6);
-            
-            contenido[0].addEventListener('animationend', event =>{
-                // console.log(event);
-                
-                if(event.animationName === 'cambiooo'){
-                    marco1.style.animationPlayState = 'running'
-                    marco1.style.animationName = 'alejar'
-                    marco1.style.animationDuration = '1.2s'
-                    marco1.style.position = 'absolute'
-                    marco1.style.animationFillMode = 'forwards'
-                    marco1.style.animationDelay = '1050ms'
-
-
-                    marco2.style.animationName = 'aparecer'
-                    marco2.style.animationPlayState = 'running'
-                    marco2.style.animationDuration = '1.2s'
-                    marco2.style.animationDelay = '1050ms'
-                    marco2.style.animationFillMode = 'forwards'
-
-                }
-            })
-            marco1.addEventListener('animationend', event =>{
-                // console.log(event);
-                if(event.animationName === 'alejar'){
-                    marco1.style.animationName = 'aparecer'
-                    marco1.style.left = '-100vw'
-                    marco1.style.animationDelay = '3050ms'
-
-                    marco2.style.animationName = 'alejar'
-                    marco2.style.left = '100px'
-                    marco2.style.animationDelay = '3050ms'
-
-                }else if(event.animationName === 'aparecer'){
-                    marco1.style.animationName = 'alejar'
-                    marco1.style.animationDelay = '3050ms'
-                    marco1.style.left = '100px'
-
-
-                    marco2.style.animationName = 'aparecer'
-                    marco2.style.left = '-100vw'
-                    marco2.style.animationDelay = '3050ms'
-
-                }
-                
-            })
-
-            
+        <script src="./scripts/index.js" >
+                     
             
         </script>
     </div>
